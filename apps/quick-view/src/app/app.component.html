@@ -1,1 +1,8 @@
-<lcmp-nx-welcome></lcmp-nx-welcome>
+<lcmp-header></lcmp-header>
+<h1>Programs</h1>
+
+<ul>
+  <li *ngFor="let p of programs">{{ p.title }}</li>
+</ul>
+
+<lcmp-button id="add-program" (click)="addProgram()" variant="secondary">Add Program</lcmp-button>

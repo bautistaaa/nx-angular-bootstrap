@@ -2,7 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "program-view": "apps/program-view",
     "quick-view": "apps/quick-view",
-    "quick-view-e2e": "apps/quick-view-e2e"
+    "quick-view-api": "apps/quick-view-api",
+    "quick-view-data": "libs/quick-view-data",
+    "ui": "libs/ui"
   }
 }

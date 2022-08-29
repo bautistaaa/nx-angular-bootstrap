@@ -1,23 +1,23 @@
 {
   "projectType": "application",
-  "sourceRoot": "apps/quick-view/src",
+  "sourceRoot": "apps/program-view/src",
   "prefix": "lcmp",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/quick-view",
-        "index": "apps/quick-view/src/index.html",
-        "main": "apps/quick-view/src/main.ts",
-        "polyfills": "apps/quick-view/src/polyfills.ts",
-        "tsConfig": "apps/quick-view/tsconfig.app.json",
+        "outputPath": "dist/apps/program-view",
+        "index": "apps/program-view/src/index.html",
+        "main": "apps/program-view/src/main.ts",
+        "polyfills": "apps/program-view/src/polyfills.ts",
+        "tsConfig": "apps/program-view/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/quick-view/src/favicon.ico",
-          "apps/quick-view/src/assets"
+          "apps/program-view/src/favicon.ico",
+          "apps/program-view/src/assets"
         ],
-        "styles": ["apps/quick-view/src/styles.scss"],
+        "styles": ["apps/program-view/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -36,8 +36,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/quick-view/src/environments/environment.ts",
-              "with": "apps/quick-view/src/environments/environment.prod.ts"
+              "replace": "apps/program-view/src/environments/environment.ts",
+              "with": "apps/program-view/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -57,37 +57,34 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "quick-view:build:production"
+          "browserTarget": "program-view:build:production"
         },
         "development": {
-          "browserTarget": "quick-view:build:development"
+          "browserTarget": "program-view:build:development"
         }
       },
-      "defaultConfiguration": "development",
-      "options": {
-        "proxyConfig": "apps/quick-view/proxy.conf.json"
-      }
+      "defaultConfiguration": "development"
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "quick-view:build"
+        "browserTarget": "program-view:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/quick-view/**/*.ts",
-          "apps/quick-view/**/*.html"
+          "apps/program-view/**/*.ts",
+          "apps/program-view/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/quick-view"],
+      "outputs": ["coverage/apps/program-view"],
       "options": {
-        "jestConfig": "apps/quick-view/jest.config.ts",
+        "jestConfig": "apps/program-view/jest.config.ts",
         "passWithNoTests": true
       }
     }
